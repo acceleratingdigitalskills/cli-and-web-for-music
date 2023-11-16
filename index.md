@@ -4,7 +4,11 @@ site: sandpaper::sandpaper_site
 
 Curriculum for a short workshop teaching skills required for working with web data at the command line. The lesson is visible at: https://acceleratingdigitalskills.github.io/cli-and-web-for-music/.
 
+::: prereq
 Before joining this training, participants should have experience working with graphical software for browsing the web and a basic understanding of the kinds of data that are available online that can support music research.
+
+This lesson guides you through the basics of file systems and the shell. If you have stored files on a computer at all and recognize the word “file” and either “directory” or “folder” (two common words for the same thing), you’re ready for this lesson.
+:::
 
 ## Lesson Objectives
 
