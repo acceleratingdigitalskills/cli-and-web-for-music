@@ -1,6 +1,6 @@
 # Introduction to the Command Line and Web Data Fundamentals for Music Researchers Curriculum
 
-Curriculum for a short (six half days) workshop teaching skills required for working with web data at the command line. The lesson is visible at: [https://carpentries.github.io/lesson-development-training/](https://acceleratingdigitalskills.github.io/cli-and-web-for-music/).
+Curriculum for a short (six half days) workshop teaching skills required for working with web data at the command line. The lesson is visible at: https://acceleratingdigitalskills.github.io/cli-and-web-for-music/.
 
 If you are interested in helping us develop this material,
 teaching the curriculum,
