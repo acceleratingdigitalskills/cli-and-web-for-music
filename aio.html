@@ -351,7 +351,7 @@ reinforce the objectives.</li>
   Output
   </h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -382,7 +382,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
   Show me the solution
   </h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -447,7 +447,7 @@ any links that you are not going to use.
  -->
 </section></section><section id="aio-filesystem"><p>Content from <a href="filesystem.html">Navigating the Filesystem</a></p>
 <hr>
-<p> Last updated on 2023-11-16 | 
+<p> Last updated on 2023-11-28 | 
         
         <a href="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/edit/main/episodes/filesystem.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -493,6 +493,163 @@ advantages.</p></li>
 </ul>
 </div>
 </div>
+</div>
+</div>
+</div>
+<p>The part of the operating system responsible for managing files and
+directories is called the <strong>file system</strong>. It organizes our
+data into files, which hold information, and directories (also called
+‘folders’), which hold files or other directories.</p>
+<p>Several commands are frequently used to create, inspect, rename, and
+delete files and directories. To start exploring them, we’ll go to our
+open shell window.</p>
+<p>First, let’s find out where we are by running a command called
+<code>pwd</code> (which stands for ‘print working directory’).
+Directories are like <em>places</em> — at any time while we are using
+the shell, we are in exactly one place called our <strong>current
+working directory</strong>. Commands mostly read and write files in the
+current working directory, i.e. ‘here’, so knowing where you are before
+running a command is important. <code>pwd</code> shows you where you
+are:</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>/Users/nelle</code></pre>
+</div>
+<p>Here, the computer’s response is <code>/Users/nelle</code>, which is
+Nelle’s <strong>home directory</strong>:</p>
+<div id="home-directory-variation" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="home-directory-variation" class="callout-inner">
+<h3 class="callout-title">Home Directory Variation<a class="anchor" aria-label="anchor" href="#home-directory-variation"></a>
+</h3>
+<div class="callout-content">
+<p>The home directory path will look different on different operating
+systems. On Mac, it is <code>/Users/nelle</code>, on Linux,
+<code>/home/nelle</code>, and on Windows, it will be similar to
+<code>C:\Documents and Settings\nelle</code> or
+<code>C:\Users\nelle</code>. (Note that it may look slightly different
+for different versions of Windows.) In future examples, we’ve used Mac
+output as the default - Linux and Windows output may differ slightly but
+should be generally similar.</p>
+<p>We will also assume that your <code>pwd</code> command returns your
+user’s home directory. If <code>pwd</code> returns something different,
+you may need to navigate there using <code>cd</code> or some commands in
+this lesson will not work as written. See <a href="#exploring-other-directories">Exploring Other Directories</a> for
+more details on the <code>cd</code> command.</p>
+</div>
+</div>
+</div>
+<p>To understand what a ‘home directory’ is, let’s have a look at how
+the file system as a whole is organized. For the sake of this example,
+we’ll be illustrating the filesystem on our scientist Nelle’s computer.
+After this illustration, you’ll be learning commands to explore your own
+filesystem, which will be constructed in a similar way, but not be
+exactly identical.</p>
+<p>On Nelle’s computer, the filesystem looks like this:</p>
+<figure><img src="fig/filesystem.svg" alt="The file system is made up of a root directory that contains sub-directoriestitled bin, data, users, and tmp" class="figure mx-auto d-block"></figure><p>The filesystem looks like an upside down tree. The topmost directory
+is the <strong>root directory</strong> that holds everything else. We
+refer to it using a slash character, <code>/</code>, on its own; this
+character is the leading slash in <code>/Users/nelle</code>.</p>
+<p>Inside that directory are several other directories: <code>bin</code>
+(which is where some built-in programs are stored), <code>data</code>
+(for miscellaneous data files), <code>Users</code> (where users’
+personal directories are located), <code>tmp</code> (for temporary files
+that don’t need to be stored long-term), and so on.</p>
+<p>We know that our current working directory <code>/Users/nelle</code>
+is stored inside <code>/Users</code> because <code>/Users</code> is the
+first part of its name. Similarly, we know that <code>/Users</code> is
+stored inside the root directory <code>/</code> because its name begins
+with <code>/</code>.</p>
+<div id="slashes" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="slashes" class="callout-inner">
+<h3 class="callout-title">Slashes<a class="anchor" aria-label="anchor" href="#slashes"></a>
+</h3>
+<div class="callout-content">
+<p>Notice that there are two meanings for the <code>/</code> character.
+When it appears at the front of a file or directory name, it refers to
+the root directory. When it appears <em>inside</em> a path, it’s just a
+separator.</p>
+</div>
+</div>
+</div>
+<p>Underneath <code>/Users</code>, we find one directory for each user
+with an account on Nelle’s machine, her colleagues <em>imhotep</em> and
+<em>larry</em>.</p>
+<figure><img src="fig/home-directories.svg" alt='Like other directories, home directories are sub-directories underneath"/Users" like "/Users/imhotep", "/Users/larry" or"/Users/nelle"' class="figure mx-auto d-block"></figure><p>The user <em>imhotep</em>’s files are stored in
+<code>/Users/imhotep</code>, user <em>larry</em>’s in
+<code>/Users/larry</code>, and Nelle’s in <code>/Users/nelle</code>.
+Nelle is the user in our examples here; therefore, we get
+<code>/Users/nelle</code> as our home directory. Typically, when you
+open a new command prompt, you will be in your home directory to
+start.</p>
+<p>Now let’s learn the command that will let us see the contents of our
+own filesystem. We can see what’s in our home directory by running
+<code>ls</code>:</p>
+<div class="codewrapper sourceCode" id="cb3">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications Documents    Library      Music        Public
+Desktop      Downloads    Movies       Pictures</code></pre>
+</div>
+<p>(Again, your results may be slightly different depending on your
+operating system and how you have customized your filesystem.)</p>
+<p><code>ls</code> prints the names of the files and directories in the
+current directory. We can make its output more comprehensible by using
+the <code>-F</code> <strong>option</strong> which tells <code>ls</code>
+to classify the output by adding a marker to file and directory names to
+indicate what they are:</p>
+<ul>
+<li>a trailing <code>/</code> indicates that this is a directory</li>
+<li>
+<code>@</code> indicates a link</li>
+<li>
+<code>*</code> indicates an executable</li>
+</ul>
+<p>Depending on your shell’s default settings, the shell might also use
+colors to indicate whether each entry is a file or directory.</p>
+<div class="codewrapper sourceCode" id="cb5">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
+</div>
+<div class="codewrapper">
+<h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="output" tabindex="0"><code>Applications/ Documents/    Library/      Music/        Public/
+Desktop/      Downloads/    Movies/       Pictures/</code></pre>
+</div>
+<p>Here, we can see that the home directory contains only
+<strong>sub-directories</strong>. Any names in the output that don’t
+have a classification symbol are <strong>files</strong> in the current
+working directory.</p>
+<div id="clearing-your-terminal" class="callout callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div id="clearing-your-terminal" class="callout-inner">
+<h3 class="callout-title">Clearing your terminal<a class="anchor" aria-label="anchor" href="#clearing-your-terminal"></a>
+</h3>
+<div class="callout-content">
+<p>If your screen gets too cluttered, you can clear your terminal using
+the <code>clear</code> command. You can still access previous commands
+using <kbd>↑</kbd> and <kbd>↓</kbd> to move line-by-line, or by
+scrolling in your terminal.</p>
 </div>
 </div>
 </div></section><section id="aio-creating-files-and-directories"><p>Content from <a href="creating-files-and-directories.html">Creating files and directories</a></p>
