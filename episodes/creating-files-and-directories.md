@@ -13,7 +13,6 @@ exercises: 0
 
 ::::::::::::::::::::::::::::::::::::: objectives
 
-- Explain the relationship between files and directories
 - Create a directory hierarchy that matches a given diagram 
 - Create empty files in the filesystem at a given location
 - Delete specified files and/or directories
