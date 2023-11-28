@@ -59,9 +59,9 @@ contact: 'eamonn.bell@durham.ac.uk'
 
 # Order of episodes in your lesson
 episodes: 
-- introduction.md
-- filesystem.md
-- creating-files-and-directories.md
+- 01-introduction.md
+- 02-filesystem.md
+- 03-creating-files-and-directories.md
 
 # Information for Learners
 learners: 
