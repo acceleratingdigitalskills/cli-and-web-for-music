@@ -68,3 +68,12 @@ There are lots.
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
+
+:::::: keypoints
+ - `cp` copies data from one location (a source) to another (a target)
+ - `cp` takes its source(s) and target as argumetns
+ - `mkdir` can be used to create directories
+ - `mv` can be used to move data from one location to another, and is similar to copying followed by deletion 
+ - `cp` and `mv` modify your files, and can lead to data loss
+::::::
