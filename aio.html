@@ -349,7 +349,7 @@ reinforce the objectives.</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Output</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -378,7 +378,7 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>You can add a line with at least three colons and a
 <code>solution</code> tag.</p>
@@ -392,13 +392,13 @@ challenge blocks?<a class="anchor" aria-label="anchor" href="#challenge-2-how-do
 <p>You can use standard markdown for static figures with the following
 syntax:</p>
 <p><code>![optional caption that appears below the figure](figure url){alt='alt text for accessibility purposes'}</code></p>
-<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><figcaption>You belong in The Carpentries!</figcaption></figure><div id="callout1" class="callout callout">
+<figure><img src="https://raw.githubusercontent.com/carpentries/logo/master/Badge_Carpentries.svg" alt="Blue Carpentries hex person logo with no text." class="figure mx-auto d-block"><div class="figcaption">You belong in The Carpentries!</div>
+</figure><div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div class="callout-inner">
-<h3 class="callout-title">Callout<a class="anchor" aria-label="anchor" href="#callout1"></a>
-</h3>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title">Callout</h3>
 <div class="callout-content">
 <p>Callout sections can highlight information.</p>
 <p>They are sometimes used to emphasise particularly important points
@@ -510,7 +510,7 @@ are:</p>
 <div class="codewrapper sourceCode" id="cb1">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> pwd</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -519,12 +519,12 @@ are:</p>
 </div>
 <p>Here, the computer’s response is <code>/Users/nelle</code>, which is
 Nelle’s <strong>home directory</strong>:</p>
-<div id="home-directory-variation" class="callout callout">
+<div id="callout1" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="home-directory-variation" class="callout-inner">
-<h3 class="callout-title">Home Directory Variation<a class="anchor" aria-label="anchor" href="#home-directory-variation"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="home-directory-variation">Home Directory Variation<a class="anchor" aria-label="anchor" href="#home-directory-variation"></a>
 </h3>
 <div class="callout-content">
 <p>The home directory path will look different on different operating
@@ -564,12 +564,12 @@ is stored inside <code>/Users</code> because <code>/Users</code> is the
 first part of its name. Similarly, we know that <code>/Users</code> is
 stored inside the root directory <code>/</code> because its name begins
 with <code>/</code>.</p>
-<div id="slashes" class="callout callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="slashes" class="callout-inner">
-<h3 class="callout-title">Slashes<a class="anchor" aria-label="anchor" href="#slashes"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="slashes">Slashes<a class="anchor" aria-label="anchor" href="#slashes"></a>
 </h3>
 <div class="callout-content">
 <p>Notice that there are two meanings for the <code>/</code> character.
@@ -595,7 +595,7 @@ own filesystem. We can see what’s in our home directory by running
 <div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -622,7 +622,7 @@ colors to indicate whether each entry is a file or directory.</p>
 <div class="codewrapper sourceCode" id="cb5">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb5-1"><a href="#cb5-1" tabindex="-1"></a><span class="ex">$</span> ls <span class="at">-F</span></span></code></pre>
 </div>
 <div class="codewrapper">
 <h3 class="code-label">OUTPUT<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
@@ -634,12 +634,12 @@ Desktop/      Downloads/    Movies/       Pictures/</code></pre>
 <strong>sub-directories</strong>. Any names in the output that don’t
 have a classification symbol are <strong>files</strong> in the current
 working directory.</p>
-<div id="clearing-your-terminal" class="callout callout">
+<div id="callout3" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
-<div id="clearing-your-terminal" class="callout-inner">
-<h3 class="callout-title">Clearing your terminal<a class="anchor" aria-label="anchor" href="#clearing-your-terminal"></a>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="clearing-your-terminal">Clearing your terminal<a class="anchor" aria-label="anchor" href="#clearing-your-terminal"></a>
 </h3>
 <div class="callout-content">
 <p>If your screen gets too cluttered, you can clear your terminal using
@@ -650,7 +650,7 @@ scrolling in your terminal.</p>
 </div>
 </div></section><section id="aio-03-creating-files-and-directories"><p>Content from <a href="03-creating-files-and-directories.html">Creating files and directories</a></p>
 <hr>
-<p>Last updated on 2023-11-30 |
+<p>Last updated on 2024-02-28 |
         
         <a href="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/edit/main/episodes/03-creating-files-and-directories.md" class="external-link">Edit this page <i aria-hidden="true" data-feather="edit"></i></a></p>
 <div class="text-end">
@@ -687,14 +687,34 @@ location</li>
 </div>
 </div>
 </div>
-<div id="copy-and-moving-files-into-subdirectories" class="callout challenge">
+<div id="working-with-files-and-folders" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="copy-and-moving-files-into-subdirectories" class="callout-inner">
-<h3 class="callout-title">Copy and moving files into subdirectories<a class="anchor" aria-label="anchor" href="#copy-and-moving-files-into-subdirectories"></a>
+<div id="working-with-files-and-folders" class="callout-inner">
+<h3 class="callout-title">Working with files and folders<a class="anchor" aria-label="anchor" href="#working-with-files-and-folders"></a>
 </h3>
 <div class="callout-content">
+<p>As well as navigating directories, we can interact with files on the
+command line: we can read them, open them, run them, and even edit them.
+In fact, there’s really no limit to what we <em>can</em> do in the
+shell, but even experienced shell users still switch to graphical user
+interfaces (GUIs) for many tasks, such as editing formatted text
+documents (Word or OpenOffice), browsing the web, converting sound files
+from one format to another, etc. But if we wanted to do this hundreds of
+music tracks, say then we could automate that conversion work by using
+shell commands.</p>
+<p>Before getting started, we will use <code>ls</code> to list the
+contents of our current directory. Using <code>ls</code> periodically to
+view your options is useful to orient oneself.</p>
+<div class="codewrapper sourceCode" id="cb1">
+<h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
+</h3>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb1-1"><a href="#cb1-1" tabindex="-1"></a><span class="ex">$</span> ls</span></code></pre>
+</div>
+<div class="section level3">
+<h3 id="copy-and-moving-files-into-subdirectories">Copy and moving files into subdirectories<a class="anchor" aria-label="anchor" href="#copy-and-moving-files-into-subdirectories"></a>
+</h3>
 <p>Start with the following filesystem hierarchy:</p>
 <pre><code>/Users/jamie/data
     - chords.json</code></pre>
@@ -708,14 +728,15 @@ commands</p>
 </ul>
 <p>so that when you execute the following commands, they return the
 output as shown:</p>
-<div class="codewrapper sourceCode" id="cb2">
+<div class="codewrapper sourceCode" id="cb3">
 <h3 class="code-label">BASH<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
 </h3>
-<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls</span>
-<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="ex">recombined</span></span>
-<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a><span class="ex">$</span> ls recombined</span>
-<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a><span class="ex">chords.json</span></span></code></pre>
+<pre class="sourceCode bash" tabindex="0"><code class="sourceCode bash"><span id="cb3-1"><a href="#cb3-1" tabindex="-1"></a><span class="ex">$</span> ls</span>
+<span id="cb3-2"><a href="#cb3-2" tabindex="-1"></a><span class="ex">recombined</span></span>
+<span id="cb3-3"><a href="#cb3-3" tabindex="-1"></a></span>
+<span id="cb3-4"><a href="#cb3-4" tabindex="-1"></a><span class="ex">$</span> ls recombined</span>
+<span id="cb3-5"><a href="#cb3-5" tabindex="-1"></a><span class="ex">chords.json</span></span></code></pre>
+</div>
 </div>
 </div>
 </div>
@@ -725,7 +746,7 @@ output as shown:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
 <div class="accordion-body">
 <ul>
 <li><code>cd ~/data</code></li>
@@ -754,10 +775,38 @@ output as shown:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
 <div class="accordion-body">
 <p>There are lots.</p>
 </div>
+</div>
+</div>
+</div>
+<div id="using-history" class="callout discussion">
+<div class="callout-square">
+<i class="callout-icon" data-feather="message-circle"></i>
+</div>
+<div id="using-history" class="callout-inner">
+<h3 class="callout-title">Using<code>history</code><a class="anchor" aria-label="anchor" href="#using-history"></a>
+</h3>
+<div class="callout-content">
+<p>Use the <code>history</code> command to see a list of all the
+commands you’ve entered during the current session. You can also use
+<kbd>Ctrl</kbd> + <kbd>r</kbd> to do a reverse lookup. Press
+<kbd>Ctrl</kbd> + <kbd>r</kbd>, then start typing any part of the
+command you’re looking for. The past command will autocomplete. Press
+<code>enter</code> to run the command again, or press the arrow keys to
+start editing the command. If multiple past commands contain the text
+you input, you can <kbd>Ctrl</kbd> + <kbd>r</kbd> repeatedly to cycle
+through them. If you can’t find what you’re looking for in the reverse
+lookup, use <kbd>Ctrl</kbd> + <kbd>c</kbd> to return to the prompt. If
+you want to save your history, maybe to extract some commands from which
+to build a script later on, you can do that with
+<code>history &gt; history.txt</code>. This will output all history to a
+text file called <code>history.txt</code> that you can later edit. To
+recall a command from history, enter <code>history</code>. Note the
+command number, e.g. 2045. Recall the command by entering
+<code>!2045</code>. This will execute the command.</p>
 </div>
 </div>
 </div>
@@ -774,7 +823,7 @@ output as shown:</p>
 <code>cp</code> copies data from one location (a source) to another
 (a target)</li>
 <li>
-<code>cp</code> takes its source(s) and target as argumetns</li>
+<code>cp</code> takes its source(s) and target as arguments</li>
 <li>
 <code>mkdir</code> can be used to create directories</li>
 <li>
@@ -834,8 +883,8 @@ to data loss</li>
   "url": "https://acceleratingdigitalskills.github.io/cli-and-web-for-music/aio.html",
   "identifier": "https://acceleratingdigitalskills.github.io/cli-and-web-for-music/aio.html",
   "dateCreated": "2023-11-19",
-  "dateModified": "2024-02-27",
-  "datePublished": "2024-02-27"
+  "dateModified": "2024-02-28",
+  "datePublished": "2024-02-28"
 }
 
   </script><script>
