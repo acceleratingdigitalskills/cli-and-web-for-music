@@ -20,7 +20,19 @@ exercises: 0
  
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
+
 ::::::::::::::::::::::::::::::::::::: challenge 
+
+## Working with files and folders
+
+As well as navigating directories, we can interact with files on the command line: we can read them, open them, run them, and even edit them. In fact, there's really no limit to what we *can* do in the shell, but even experienced shell users still switch to graphical user interfaces (GUIs) for many tasks, such as editing formatted text documents (Word or OpenOffice), browsing the web, converting sound files from one format to another, etc. But if we wanted to do this hundreds of music tracks, say then we could automate that conversion work by using shell commands.
+
+Before getting started, we will use `ls` to list the contents of our current directory. Using `ls` periodically to view your options is useful to orient oneself.
+
+```bash
+$ ls
+```
 
 ### Copy and moving files into subdirectories
 
@@ -69,10 +81,17 @@ There are lots.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+:::::::::::::::::::::::::::::::::::::::  challenge
+
+## Using `history`
+
+Use the `history` command to see a list of all the commands you've entered during the current session. You can also use <kbd>Ctrl</kbd> + <kbd>r</kbd> to do a reverse lookup. Press <kbd>Ctrl</kbd> + <kbd>r</kbd>, then start typing any part of the command you're looking for. The past command will autocomplete. Press `enter` to run the command again, or press the arrow keys to start editing the command. If multiple past commands contain the text you input, you can <kbd>Ctrl</kbd> + <kbd>r</kbd> repeatedly to cycle through them. If you can't find what you're looking for in the reverse lookup, use <kbd>Ctrl</kbd> + <kbd>c</kbd> to return to the prompt. If you want to save your history, maybe to extract some commands from which to build a script later on, you can do that with `history > history.txt`. This will output all history to a text file called `history.txt` that you can later edit. To recall a command from history, enter `history`. Note the command number, e.g. 2045. Recall the command by entering `!2045`. This will execute the command.
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
 
 :::::: keypoints
  - `cp` copies data from one location (a source) to another (a target)
- - `cp` takes its source(s) and target as argumetns
+ - `cp` takes its source(s) and target as arguments
  - `mkdir` can be used to create directories
  - `mv` can be used to move data from one location to another, and is similar to copying followed by deletion 
  - `cp` and `mv` modify your files, and can lead to data loss
