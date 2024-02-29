@@ -91,21 +91,30 @@ and post your answer to the following questions:
 
 ## Content vs. styling: HTML and friends
 
+Web browsers are little more than glorified document fetchers and viewers for the web. The main reason that browsers do not seem quite like this is because these documents have become highly interactive, and because web designers have moved to a mode of designing websites and web applications so that they increasingly resemble the kinds of graphical applications that run on your desktop computer (with icons, menus, toolbars, animations/transitions, etc.) The earliest websites were much less interactive. Yet, no matter how complicated or simple the design of a website, every single piece of content in a web page - starting with textual content and the logical strucutre of the page itself -  must be fetched by the browser. We have already learned that format used to encode this content is called HTML, and is associated with the file extension `.html`.
+
+Next, we consider the overall look and feel or "style" of the website. Aspects of styling may include the size, color, and font choices for the text but also other considerations such as the relative or absolute layout of key page elements and their size. This information is conventionally transferred from the server to the browser as a separate file or set of files, in a format called Cascading Style Sheets (or, CSS), and is associated with the `.css` file extension. In order for the browser to present the web resource as intended, another HTTP request is required to retrieve the appropriate CSS file(s). Since HTTP makes use of URLs to locate and retrieve resources, there will be a URL associated with each of these files.
+
 ![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/e0460463-5dee-45e5-a723-09f21b10f2e3)
+
+The web is a multimedia platform, and one of the earliest media types to be supported by browsers was the image. As you may know, images may be stored in a variety of formats (e.g. GIF, JPEG, WebP), and there is therefore a variety of extensions associated with them (i.e. `.gif`, `.jpg` or `.jpeg`, `.webp`). Again, for each image, a new HTTP request is typically required. Hence, each image will likely be associated with its own URL. You may notice that the URLs for resources, such as images, do not necessarily contain the same domain name as the domain name of the site you are visiting.
 
 ![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/8a54d646-d044-434a-9fc0-3873686d178c)
 
+Increasingly, designers are keen to ensure that websites and related resources are interactive and dynamic, and this requires the transfer of content in yet another format: Javascript. Javascript is a flexible, general-purpose programming language that is executed (more-or-less) entirely contained within the browser and allows web developers to create extremely rich, interactive modifications to the document content on the fly. It is commonly stored in files with the `.js` extension, which are requested by the browser, again using HTTP.
+
 ![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b7794a69-c650-4196-82ed-6072bf3616af)
 
+Once the assorted files have been requested by the client, which in this case is the web browser, they are assembled and interpreted to provide the total experience of the page. The specific details of each of thes file formats are not relevant to this lesson; the key takeaway is that most web pages in fact decompose into multiple parts, each of which is associated with a single HTTP request. Understanding this fact allows us to begin to pick apart web resources into their consituent parts, some of which are more or less usable for research purposes.
 
 ## Developer Tools and the complexity of the modern web
 
-To understand precisely what and how many HTTP requests that a browser makes in the course of requesting a single web page, we can use the built-in Developer Tools in the Chrome browser, to inspect the all network activity for a single page load.
+To understand precisely what and how many HTTP requests that a browser makes in the course of requesting a single web page, we can use the built-in Developer Tools function of most modern borwsers, to inspect the all network activity for a single page load event.
 
 To do this:
 
 1. First, navigate to a site of your choice
-2. Then, open Chrome Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or Ctrl+Shift+I/Cmd+Shift+I)
+2. Then, open Chrome Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or <kbd>Ctrl+Shift+I</kbd>/<kbd>Cmd+Shift+I</kbd>)
 3. A new pane will pop open; navigate to the “Network” pane.
 4. Ensure that network activity is being recorded by clicking the red “record” button in the top left of the pane
 5. Refresh the page (shortcut: F5)
@@ -114,7 +123,6 @@ To do this:
 Something like the image shown here will result:
 
 ![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dbc8f0be-55a1-4963-bad0-c9c0d4cd3a59)
-
 
 The colored bars at the top of the screen show each individual HTTP request graphically (the “waterfall”), with the duration taken for each request to be fulfilled is given by the length of the bar. The different colors indicate what the status of the request is over time. Notice also the statisics at the end of the file list: the total number of requests made, the total amount of data transferred, and the total load time for the site.
 
@@ -132,11 +140,11 @@ Under the Timing pane, you’ll see a more fine-grained look at the time that ea
 
 Post your answer to the following questions:
 
-1. The URI of the page or resource on the site that you visited
-2. A URI pointing to a CSS file (ending .css) used by this page
-3. A URI pointing to a Javascript file (ending .js) used by this page
-4. A URI pointing to an image file (many extensions possible) used by this page
-5. A URI pointing to some other file (many extensions) used by this page
+1. The URL of the page or resource on the site that you visited
+2. A URL pointing to a CSS file (ending .css) used by this page
+3. A URL pointing to a Javascript file (ending .js) used by this page
+4. A URL pointing to an image file (many extensions possible) used by this page
+5. A URL pointing to some other file (many extensions) used by this page
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
