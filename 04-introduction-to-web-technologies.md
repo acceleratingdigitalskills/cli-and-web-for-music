@@ -28,6 +28,14 @@ Learners should be familiar with paths and file extensions. This episode asks le
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+:::::::::::::::::::::::::::::::::::::::: callout
+
+This is a test of how the callout works.
+
+Something going on here.
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 ## What happens when we use a web browser?
 
 The majority of users access web resources by using browsers, such as Google Chrome, Mozilla Firefox, and Apple’s Safari, to view and interact with websites. Remote computers deliver the content of websites, via the internet, to the users’s computer following a request from the browser. In this course, we don’t have time to describe the details of how this content is delivered. However, It is important to know the following terminology:
