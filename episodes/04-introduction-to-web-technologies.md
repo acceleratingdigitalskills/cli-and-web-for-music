@@ -17,6 +17,7 @@ exercises: 10
 - To know that HTTP is used to request remote resources by browsers and by other applications
 - To understand that browsers make multiple HTTP requests when loading most modern websites
 - To understand the important components of a URL
+- To introduce the browser's developer tools as a resource for researchers
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -117,7 +118,7 @@ To understand precisely what and how many HTTP requests that a browser makes in 
 
 Most modern browsers include a set of tools called "developer tools", which areused by the programmers who create websites and other interactive experiences to debug and assess the performance of their creations, among other things. However, they are an extraordinarily useful asset for researchers, and are a useful way to get started thinking about what's "under the hood" of the web. These are almost certainly available in the browser you've already installed.
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+::::::::::::::::: callout
 
 ### Developer tools in different browsers
 
@@ -155,7 +156,7 @@ Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your key
 
 Or simply use the shortcut <kbd>Cmd+Option+I</kbd> on your keyboard.
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 To do this:
 
@@ -197,13 +198,13 @@ Post your answer to the following questions:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-:::::::::::::::::::::::::::::::::::::::::  callout
+::::::::::::::::: callout
 
 ### Absolute vs. relative URLs
 
 Just like with paths, there are absolute URLs and relative URLs. This distinction is not relevant for the rest of this lesson, but if you would like to learn more about this, please consult the [mdn web docs page, "What is a URL?"](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL).
 
-::::::::::::::::::::::::::::::::::::::::::::::::::
+:::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
