@@ -77,6 +77,24 @@ and post your answer to the following questions:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
+::::::::::::::::::::::::::::::::::::: challenge 
+
+## Challenge 2: The feel of the web
+
+1. Pick a website that you regularly consult for research purposes; any website will do
+2. Visit any page on this website
+3. Open the developer tools in your browser and navigate to the Network tab (the name may vary). Press the refresh button (or F5)
+
+Post your answer to the following questions:
+
+1. The URI of the page or resource on the site that you visited
+2. A URI pointing to a CSS file (ending .css) used by this page
+3. A URI pointing to a Javascript file (ending .js) used by this page
+4. A URI pointing to an image file (many extensions possible) used by this page
+5. A URI pointing to some other file (many extensions) used by this page
+
+::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
