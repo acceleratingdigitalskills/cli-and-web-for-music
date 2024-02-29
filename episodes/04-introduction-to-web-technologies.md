@@ -12,6 +12,7 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - To know that HTTP is used to request remote resources by browsers and by other applications
@@ -20,11 +21,13 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+
 :::::::::::::::::::::::::::::::::::::::: instructor
 
 Learners should be familiar with paths and file extensions. This episode asks learners to use a web broswer.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## What happens when we use a web browser?
 
@@ -65,6 +68,7 @@ There are also some additional elements to URLs that distinguish them from paths
 - *parameters*: a list of key-value pairs, separated by the `&` symbol which modify the resource returned in some way
 - *anchor*: this optional part of a URL can be used to link directly to some component of the file being requested, typically a header or subheader of a HTML document
 
+
 ::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Challenge 1: Dissecting a URL
@@ -90,6 +94,7 @@ and post your answer to the following questions:
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 ## Content vs. styling: HTML and friends
 
@@ -149,6 +154,7 @@ Post your answer to the following questions:
 5. A URL pointing to some other file (many extensions) used by this page
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
+
 
 
 :::::::::::::::::::::::::::::::::::::::::  callout
