@@ -807,10 +807,10 @@ most modern websites</li>
   <h3 class="accordion-header" id="headingInstructor1">
 <div class="note-square"><i aria-hidden="true" class="callout-icon" data-feather="edit-2"></i></div>Instructor Note</h3>
 </button>
-<div id="collapseInstructor1" class="accordion-collapse collapse" aria-labelledby="headingInstructor1" data-bs-parent="#accordionInstructor1">
+<div id="collapseInstructor1" class="accordion-collapse collapse" data-bs-parent="#accordionInstructor1" aria-labelledby="headingInstructor1">
 <div class="accordion-body">
 <p>Learners should be familiar with paths and file extensions. This
-episode asks learners to use a web broswer.</p>
+episode asks learners to use a web browser.</p>
 </div>
 </div>
 </div>
@@ -826,8 +826,11 @@ In this course, we don’t have time to describe the details of how this
 content is delivered. However, It is important to know the following
 terminology:</p>
 <ul>
-<li>server: a computer connected to the internet that provides content
-on request = client: a computer connected to the internet that requests
+<li>
+<em>server</em>: a computer connected to the internet that provides
+content on request</li>
+<li>
+<em>client</em>: a computer connected to the internet that requests
 and receives content</li>
 </ul>
 <p>Usually, the user deliberately makes these requests from the browser
@@ -844,7 +847,10 @@ specified over the last several decades of its existence and is called
 HTTP, which stands for HyperText Transfer Protocol. HTTP provides a set
 of formal guidelines about how Web content is published and made
 available on a server, and how a client should make and handle requests
-for this content.</p>
+for this content. It is a relatively straightforward protocol, using a
+set of “verbs” that specify the actions that the client wishes to
+communicate to the server. One such verb is <code>GET</code>, which is
+why this appears in the diagram above.</p>
 <p>The set of rules or patterns that specify the form the data that is
 passed between two parties is called a file format. You are likely
 familiar with a selection of file formats already. For example, the
@@ -853,6 +859,13 @@ of the same final-year essay is primarily a difference of format. One
 file format that is commonly requested by and delivered to web users is
 HyperText Markup Language, or HTML (<code>.html</code> file
 extension).</p>
+<p>We will look more closely at the HTML format in a subsequent episode.
+For now, you can think of the HTML format as providing a way to specify
+(a) the content of a document (i.e. what text, images, and other media -
+if any - should it consist of) alongside (b) the logical structure of
+the document (i.e. any hierarchical aspects that structure these
+contents relative to each other, such as a title, headings, and
+subheadings, and/or other part-whole relationships).</p>
 </section><section id="what-is-a-url"><h2 class="section-heading">What is a URL?<a class="anchor" aria-label="anchor" href="#what-is-a-url"></a>
 </h2>
 <hr class="half-width">
@@ -896,7 +909,8 @@ organisational structure of the server</li>
 way</li>
 <li>
 <em>anchor</em>: this optional part of a URL can be used to link
-directly to some component</li>
+directly to some component of the file being requested, typically a
+header or subheader of a HTML document</li>
 </ul>
 <div id="challenge-1-dissecting-a-url" class="callout challenge">
 <div class="callout-square">
@@ -926,7 +940,7 @@ parameters?</li>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ol style="list-style-type: decimal">
 <li>https (Secure HTTP/TLS)</li>
@@ -942,7 +956,180 @@ specified explicitly.</li>
 </div>
 </div>
 </div>
-<div id="challenge-2-the-feel-of-the-web" class="callout discussion">
+</section><section id="content-vs.-styling-html-and-friends"><h2 class="section-heading">Content vs. styling: HTML and friends<a class="anchor" aria-label="anchor" href="#content-vs.-styling-html-and-friends"></a>
+</h2>
+<hr class="half-width">
+<p>Web browsers are little more than glorified document fetchers and
+viewers for the web. The main reason that browsers do not seem quite
+like this is because these documents have become highly interactive, and
+because web designers have moved to a mode of designing websites and web
+applications so that they increasingly resemble the kinds of graphical
+applications that run on your desktop computer (with icons, menus,
+toolbars, animations/transitions, etc.) The earliest websites were much
+less interactive. Yet, no matter how complicated or simple the design of
+a website, every single piece of content in a web page - starting with
+textual content and the logical strucutre of the page itself - must be
+fetched by the browser. We have already learned that format used to
+encode this content is called HTML, and is associated with the file
+extension <code>.html</code>.</p>
+<p>Next, we consider the overall look and feel or “style” of the
+website. Aspects of styling may include the size, color, and font
+choices for the text but also other considerations such as the relative
+or absolute layout of key page elements and their size. This information
+is conventionally transferred from the server to the browser as a
+separate file or set of files, in a format called Cascading Style Sheets
+(or, CSS), and is associated with the <code>.css</code> file extension.
+In order for the browser to present the web resource as intended,
+another HTTP request is required to retrieve the appropriate CSS
+file(s). Since HTTP makes use of URLs to locate and retrieve resources,
+there will be a URL associated with each of these files.</p>
+<figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/e0460463-5dee-45e5-a723-09f21b10f2e3" alt="image" class="figure mx-auto d-block"><div class="figcaption">image</div>
+</figure><p>The web is a multimedia platform, and one of the earliest media types
+to be supported by browsers was the image. As you may know, images may
+be stored in a variety of formats (e.g. GIF, JPEG, WebP), and there is
+therefore a variety of extensions associated with them
+(i.e. <code>.gif</code>, <code>.jpg</code> or <code>.jpeg</code>,
+<code>.webp</code>). Again, for each image, a new HTTP request is
+typically required. Hence, each image will likely be associated with its
+own URL. You may notice that the URLs for resources, such as images, do
+not necessarily contain the same domain name as the domain name of the
+site you are visiting.</p>
+<figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/8a54d646-d044-434a-9fc0-3873686d178c" alt="image" class="figure mx-auto d-block"><div class="figcaption">image</div>
+</figure><p>Increasingly, designers are keen to ensure that websites and related
+resources are interactive and dynamic, and this requires the transfer of
+content in yet another format: Javascript. Javascript is a flexible,
+general-purpose programming language that is executed (more-or-less)
+entirely contained within the browser and allows web developers to
+create extremely rich, interactive modifications to the document content
+on the fly. It is commonly stored in files with the <code>.js</code>
+extension, which are requested by the browser, again using HTTP.</p>
+<figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b7794a69-c650-4196-82ed-6072bf3616af" alt="image" class="figure mx-auto d-block"><div class="figcaption">image</div>
+</figure><p>Once the assorted files have been requested by the client, which in
+this case is the web browser, they are assembled and interpreted to
+provide the total experience of the page. The specific details of each
+of thes file formats are not relevant to this lesson; the key takeaway
+is that most web pages in fact decompose into multiple parts, each of
+which is associated with a single HTTP request. Understanding this fact
+allows us to begin to pick apart web resources into their consituent
+parts, some of which are more or less usable for research purposes.</p>
+</section><section id="developer-tools-and-the-complexity-of-the-modern-web"><h2 class="section-heading">Developer Tools and the complexity of the modern web<a class="anchor" aria-label="anchor" href="#developer-tools-and-the-complexity-of-the-modern-web"></a>
+</h2>
+<hr class="half-width">
+<p>To understand precisely what and how many HTTP requests that a
+browser makes in the course of requesting a single web page, we can use
+the built-in Developer Tools function of most modern borwsers, to
+inspect the all network activity for a single page load event.</p>
+<p>Most modern browsers include a set of tools called “developer tools”,
+which areused by the programmers who create websites and other
+interactive experiences to debug and assess the performance of their
+creations, among other things. However, they are an extraordinarily
+useful asset for researchers, and are a useful way to get started
+thinking about what’s “under the hood” of the web. These are almost
+certainly available in the browser you’ve already installed.</p>
+<div id="callout1" class="callout">
+<div class="callout-square">
+<i class="callout-icon" data-feather="bell"></i>
+</div>
+<div class="section level3 callout-title callout-inner">
+<h3 class="callout-title" id="developer-tools-in-different-browsers">Developer tools in different browsers<a class="anchor" aria-label="anchor" href="#developer-tools-in-different-browsers"></a>
+</h3>
+<div class="callout-content">
+<p>Different browsers (and different operating systems) expose developer
+tools in different ways. Here is a quick guide. Some of the details of
+what follows will vary depending on your specific browser. To follow
+along exactly, it is recommended to use Google Chrome.</p>
+<div class="section level2">
+<h2 id="microsoft-edge">Microsoft Edge<a class="anchor" aria-label="anchor" href="#microsoft-edge"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Click on the <strong>three-dot menu</strong> in the top right
+corner.</li>
+<li>Hover over <strong>More Tools</strong>.</li>
+<li>Click on <strong>Developer Tools</strong>.</li>
+</ol>
+<p>Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>
+on your keyboard.</p>
+</div>
+<div class="section level2">
+<h2 id="firefox">Firefox<a class="anchor" aria-label="anchor" href="#firefox"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Click on the <strong>three-line menu</strong> in the top right
+corner.</li>
+<li>Click on <strong>Web Developer</strong>.</li>
+<li>Click on <strong>Toggle Tools</strong>.</li>
+</ol>
+<p>Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>
+on your keyboard.</p>
+</div>
+<div class="section level2">
+<h2 id="google-chrome">Google Chrome<a class="anchor" aria-label="anchor" href="#google-chrome"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Click on the <strong>three-dot menu</strong> in the top right
+corner.</li>
+<li>Hover over <strong>More Tools</strong>.</li>
+<li>Click on <strong>Developer Tools</strong>.</li>
+</ol>
+<p>Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd>
+on your keyboard.</p>
+</div>
+<div class="section level2">
+<h2 id="safari-on-mac">Safari (on Mac)<a class="anchor" aria-label="anchor" href="#safari-on-mac"></a>
+</h2>
+<ol style="list-style-type: decimal">
+<li>Click on <strong>Safari</strong> in the top left corner of the
+screen.</li>
+<li>Click on <strong>Preferences</strong>.</li>
+<li>Go to the <strong>Advanced</strong> tab.</li>
+<li>Check the box at the bottom that says <strong>Show Develop menu in
+menu bar</strong>.</li>
+<li>Close the Preferences window. The <strong>Develop</strong> menu will
+now appear in the menu bar.</li>
+<li>Click on <strong>Develop</strong> in the menu bar.</li>
+<li>Click on <strong>Show Web Inspector</strong>.</li>
+</ol>
+<p>Or simply use the shortcut <kbd>Cmd+Option+I</kbd> on your
+keyboard.</p>
+</div>
+</div>
+</div>
+</div>
+<p>To do this:</p>
+<ol style="list-style-type: decimal">
+<li>First, navigate to a site of your choice</li>
+<li>Then, open Developer Tools using the three dots menu in the top
+right (Windows/Linux) or under the menu View &gt; Developer… (or
+<kbd>Ctrl+Shift+I</kbd>/<kbd>Cmd+Shift+I</kbd>)</li>
+<li>A new pane will pop open; navigate to the “Network” pane.</li>
+<li>Ensure that network activity is being recorded by clicking the red
+“record” button in the top left of the pane</li>
+<li>Refresh the page (shortcut: F5)</li>
+<li>Once the page is finsihed loading, disable recording</li>
+</ol>
+<p>Something like the image shown here will result:</p>
+<figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dbc8f0be-55a1-4963-bad0-c9c0d4cd3a59" alt="image" class="figure mx-auto d-block"><div class="figcaption">image</div>
+</figure><p>The colored bars at the top of the screen show each individual HTTP
+request graphically (the “waterfall”), with the duration taken for each
+request to be fulfilled is given by the length of the bar. The different
+colors indicate what the status of the request is over time. Notice also
+the statisics at the end of the file list: the total number of requests
+made, the total amount of data transferred, and the total load time for
+the site.</p>
+<p>To dig into a particular request, select it from the list and double
+click on it. It will open a new pane as below. Look at the very first
+request in the list, the request for the document itself: index.html.
+From this we’ll see a a lot more information about the request,
+including the HTTP status code associated with the response, and the IP
+address of the responding server. We also see the request method, the
+HTTP “verb” that was used to fetch the resource. Almost all
+browser-initated requests will use the <code>GET</code> verb, but others
+are available (<code>POST</code> is another verb and is used to submit
+form data, and sometimes to call APIs — see later episodes).</p>
+<p>Under the Timing pane, you’ll see a more fine-grained look at the
+time that each request took and what the colors stand for.</p>
+<figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/4c87eaa7-03a0-4359-ab40-4e1abddf92fd" alt="image" class="figure mx-auto d-block"><div class="figcaption">image</div>
+</figure><div id="challenge-2-the-feel-of-the-web" class="callout discussion">
 <div class="callout-square">
 <i class="callout-icon" data-feather="message-circle"></i>
 </div>
@@ -959,19 +1146,19 @@ tab (the name may vary). Press the refresh button (or F5)</li>
 </ol>
 <p>Post your answer to the following questions:</p>
 <ol style="list-style-type: decimal">
-<li>The URI of the page or resource on the site that you visited</li>
-<li>A URI pointing to a CSS file (ending .css) used by this page</li>
-<li>A URI pointing to a Javascript file (ending .js) used by this
+<li>The URL of the page or resource on the site that you visited</li>
+<li>A URL pointing to a CSS file (ending .css) used by this page</li>
+<li>A URL pointing to a Javascript file (ending .js) used by this
 page</li>
-<li>A URI pointing to an image file (many extensions possible) used by
+<li>A URL pointing to an image file (many extensions possible) used by
 this page</li>
-<li>A URI pointing to some other file (many extensions) used by this
+<li>A URL pointing to some other file (many extensions) used by this
 page</li>
 </ol>
 </div>
 </div>
 </div>
-<div id="callout1" class="callout">
+<div id="callout2" class="callout">
 <div class="callout-square">
 <i class="callout-icon" data-feather="bell"></i>
 </div>
@@ -995,9 +1182,15 @@ web docs page, “What is a URL?”</a>.</p>
 </h3>
 <div class="callout-content">
 <ul>
-<li>HTTP</li>
-<li>URIs</li>
-<li>Developer tools can be used</li>
+<li>Web servers provide remote resources to clients, most commonly
+browsers, using the HTTP protocol</li>
+<li>URLs are the “addresses” of the web, and they specify the location
+of a remote resource for the purposes of retrieval</li>
+<li>Most websites today consist of resources of a variety of file
+formats, and each remote resource usually demands its own HTTP request
+and has its own URL associated with it</li>
+<li>We can inspect the torrent of HTTP requests that websites require by
+using most modern browser’s Developer Tools</li>
 </ul>
 </div>
 </div>
