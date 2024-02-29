@@ -39,7 +39,9 @@ Usually, the user deliberately makes these requests from the browser either by d
 
 A set of rules regulating the communication between two parties is called a protocol. The most commonly used set of rules has been specified over the last several decades of its existence and is called HTTP, which stands for HyperText Transfer Protocol. HTTP provides a set of formal guidelines about how Web content is published and made available on a server, and how a client should make and handle requests for this content. 
 
-The set of rules or patterns that specify the form the data that is passed between two parties is called a file format. You are likely familiar with a selection of file formats already. For example, the difference between a `.doc` file and a `.pdf` file of the same final-year essay is primarily a difference of format. One file format that is commonly requested by and delivered to web users is HyperText Markup Language, or HTML (`.html` file extension).
+The set of rules or patterns that specify the form the data that is passed between two parties is called a file format. You are likely familiar with a selection of file formats already. For example, the difference between a `.doc` file and a `.pdf` file of the same final-year essay is primarily a difference of format. One file format that is commonly requested by and delivered to web users is HyperText Markup Language, or HTML (`.html` file extension). 
+
+We will look more closely at the HTML format in a subsequent episode. For now, you can think of the HTML format as providing a way to specify (a) the content of a document (i.e. what text, images, and other media - if any - should it consist of) alongside (b) the logical structure of the document (i.e. any hierarchical aspects that structure these contents relative to each other, such as a title, headings, and subheadings, and/or other part-whole relationships).
 
 ## What is a URL?
 
@@ -61,7 +63,7 @@ There are also some additional elements to URLs that distinguish them from paths
 - *port*: an integer that is used to further specify where to look on the remote server 
 - *path*: where the remote resource is located within the organisational structure of the server
 - *parameters*: a list of key-value pairs, separated by the `&` symbol which modify the resource returned in some way
-- *anchor*: this optional part of a URL can be used to link directly to some component  
+- *anchor*: this optional part of a URL can be used to link directly to some component of the file being requested, typically a header or subheader of a HTML document
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
