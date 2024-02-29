@@ -12,7 +12,6 @@ exercises: 10
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
-
 ::::::::::::::::::::::::::::::::::::: objectives
 
 - To know that HTTP is used to request remote resources by browsers and by other applications
@@ -20,7 +19,6 @@ exercises: 10
 - To understand the important components of a URL
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 :::::::::::::::::::::::::::::::::::::::: instructor
 
@@ -40,7 +38,7 @@ Usually, the user deliberately makes these requests from the browser either by d
 
 ![An illustration of what happens when a user "visits" a web page using a browser](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b450e56f-d4c7-4b01-b26f-cca30fbeac15)
 
-A set of rules regulating the communication between two parties is called a protocol. The most commonly used set of rules has been specified over the last several decades of its existence and is called HTTP, which stands for HyperText Transfer Protocol. HTTP provides a set of formal guidelines about how Web content is published and made available on a server, and how a client should make and handle requests for this content. 
+A set of rules regulating the communication between two parties is called a protocol. The most commonly used set of rules has been specified over the last several decades of its existence and is called HTTP, which stands for HyperText Transfer Protocol. HTTP provides a set of formal guidelines about how Web content is published and made available on a server, and how a client should make and handle requests for this content. It is a relatively straightforward protocol, using a set of "verbs" that specify the actions that the client wishes to communicate to the server. One such verb is `GET`, which is why this appears in the diagram above.
 
 The set of rules or patterns that specify the form the data that is passed between two parties is called a file format. You are likely familiar with a selection of file formats already. For example, the difference between a `.doc` file and a `.pdf` file of the same final-year essay is primarily a difference of format. One file format that is commonly requested by and delivered to web users is HyperText Markup Language, or HTML (`.html` file extension). 
 
@@ -67,7 +65,6 @@ There are also some additional elements to URLs that distinguish them from paths
 - *path*: where the remote resource is located within the organisational structure of the server
 - *parameters*: a list of key-value pairs, separated by the `&` symbol which modify the resource returned in some way
 - *anchor*: this optional part of a URL can be used to link directly to some component of the file being requested, typically a header or subheader of a HTML document
-
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
@@ -118,6 +115,15 @@ Once the assorted files have been requested by the client, which in this case is
 
 To understand precisely what and how many HTTP requests that a browser makes in the course of requesting a single web page, we can use the built-in Developer Tools function of most modern borwsers, to inspect the all network activity for a single page load event.
 
+:::::::::::::::::::::::::::::::::::::::::  callout
+
+## Developer Tools in different browsers
+
+tbd 
+
+::::::::::::::::::::::::::::::::::::::::::::::::::
+
+
 To do this:
 
 1. First, navigate to a site of your choice
@@ -156,7 +162,6 @@ Post your answer to the following questions:
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
 
-
 :::::::::::::::::::::::::::::::::::::::::  callout
 
 ## Absolute vs. relative URLs
@@ -170,5 +175,6 @@ Just like with paths, there are absolute URLs and relative URLs. This distinctio
 - HTTP
 - URIs
 - Developer tools can be used
+
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
