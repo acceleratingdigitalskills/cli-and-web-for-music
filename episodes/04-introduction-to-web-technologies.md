@@ -30,8 +30,8 @@ Learners should be familiar with paths and file extensions. This episode asks le
 
 The majority of users access web resources by using browsers, such as Google Chrome, Mozilla Firefox, and Apple’s Safari, to view and interact with websites. Remote computers deliver the content of websites, via the internet, to the users’s computer following a request from the browser. In this course, we don’t have time to describe the details of how this content is delivered. However, It is important to know the following terminology:
 
-- server: a computer connected to the internet that provides content on request
-= client: a computer connected to the internet that requests and receives content
+- *server*: a computer connected to the internet that provides content on request
+- *client*: a computer connected to the internet that requests and receives content
 
 Usually, the user deliberately makes these requests from the browser either by directly typing in the location of the content that is being requested into the browser’s navigation bar, or, more frequently, by clicking on hyperlinks, or links. The browser then uses a set of rules (shared by the client and the server) to initiate the request, and handle the response. 
 
@@ -89,8 +89,40 @@ and post your answer to the following questions:
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
+## Content vs. styling: HTML and friends
 
-::::::::::::::::::::::::::::::::::::: challenge 
+![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/e0460463-5dee-45e5-a723-09f21b10f2e3)
+
+![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/8a54d646-d044-434a-9fc0-3873686d178c)
+
+![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b7794a69-c650-4196-82ed-6072bf3616af)
+
+
+## Developer Tools and the complexity of the modern web
+
+To understand precisely what and how many HTTP requests that a browser makes in the course of requesting a single web page, we can use the built-in Developer Tools in the Chrome browser, to inspect the all network activity for a single page load.
+
+To do this:
+
+1. First, navigate to a site of your choice
+2. Then, open Chrome Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or Ctrl+Shift+I/Cmd+Shift+I)
+3. A new pane will pop open; navigate to the “Network” pane.
+4. Ensure that network activity is being recorded by clicking the red “record” button in the top left of the pane
+5. Refresh the page (shortcut: F5)
+6. Once the page is finsihed loading, disable recording
+
+Something like the image shown here will result:
+
+![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dbc8f0be-55a1-4963-bad0-c9c0d4cd3a59)
+
+
+The colored bars at the top of the screen show each individual HTTP request graphically (the “waterfall”), with the duration taken for each request to be fulfilled is given by the length of the bar. The different colors indicate what the status of the request is over time. Notice also the statisics at the end of the file list: the total number of requests made, the total amount of data transferred, and the total load time for the site.
+
+To dig into a particular request, select it from the list and double click on it. It will open a new pane as below. Look at the very first request in the list, the request for the document itself: index.html. From this we’ll see a a lot more information about the request, including the HTTP status code associated with the response, and the IP address of the responding server. We also see the “request method”, the HTTP “verb” that was used to fetch the resource. Almost all browser-initated requests will use the GET verb, but others are available (POST is another verb and is used to submit form data, and sometimes to call APIS—see below).
+
+Under the Timing pane, you’ll see a more fine-grained look at the time that each request took and what the colors stand for.
+
+![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/4c87eaa7-03a0-4359-ab40-4e1abddf92fd)
 
 ## Challenge 2: The feel of the web
 
