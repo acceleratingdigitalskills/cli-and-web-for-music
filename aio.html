@@ -758,7 +758,7 @@ output as shown:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution1" aria-expanded="false" aria-controls="collapseSolution1">
   <h4 class="accordion-header" id="headingSolution1">Show me the solution</h4>
 </button>
-<div id="collapseSolution1" class="accordion-collapse collapse" aria-labelledby="headingSolution1" data-bs-parent="#accordionSolution1">
+<div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
 <ul>
 <li><code>cd ~/data</code></li>
@@ -787,7 +787,7 @@ output as shown:</p>
 <button class="accordion-button solution-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseSolution2" aria-expanded="false" aria-controls="collapseSolution2">
   <h4 class="accordion-header" id="headingSolution2">Show me the solution</h4>
 </button>
-<div id="collapseSolution2" class="accordion-collapse collapse" aria-labelledby="headingSolution2" data-bs-parent="#accordionSolution2">
+<div id="collapseSolution2" class="accordion-collapse collapse" data-bs-parent="#accordionSolution2" aria-labelledby="headingSolution2">
 <div class="accordion-body">
 <p>There are lots.</p>
 </div>
@@ -912,24 +912,50 @@ will see in later episodes. Howeer, there is no guarantee that the
 structure of the URL corresponds directly to the layout of particular
 directories on the remote server.</p>
 <p>There are also some additional elements to URLs that distinguish them
-from paths. Let’s have a look at the anatomy of a URL</p>
+from paths. Let’s have a look at the anatomy of a URL:</p>
 <figure><img src="https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dd152a76-cae4-4839-821d-0690aecfd33b" alt="A sample URL with its components highlighted: scheme, domain name, port, path, parameters, and anchor" class="figure mx-auto d-block"><div class="figcaption">The anatomy of a URL (credit: mdn Web
 docs)</div>
-</figure><div id="challenge-1-can-you-do-it" class="callout challenge">
+</figure><ul>
+<li>
+<em>scheme</em>: tells what protocol should be used to interact with
+the remote resource</li>
+<li>
+<em>domain name</em>: points us to the location of the remote server
+in human-readable form</li>
+<li>
+<em>port</em>: an integer that is used to further specify where to
+look on the remote server</li>
+<li>
+<em>path</em>: where the remote resource is located within the
+organisational structure of the server</li>
+<li>
+<em>parameters</em>: a list of key-value pairs, separated by the
+<code>&amp;</code> symbol which modify the resource returned in some
+way</li>
+<li>
+<em>anchor</em>: this optional part of a URL can be used to link
+directly to some component</li>
+</ul>
+<div id="challenge-1-dissecting-a-url" class="callout challenge">
 <div class="callout-square">
 <i class="callout-icon" data-feather="zap"></i>
 </div>
-<div id="challenge-1-can-you-do-it" class="callout-inner">
-<h3 class="callout-title">Challenge 1: Can you do it?<a class="anchor" aria-label="anchor" href="#challenge-1-can-you-do-it"></a>
+<div id="challenge-1-dissecting-a-url" class="callout-inner">
+<h3 class="callout-title">Challenge 1: Dissecting a URL<a class="anchor" aria-label="anchor" href="#challenge-1-dissecting-a-url"></a>
 </h3>
 <div class="callout-content">
-<p>What is the output of this command?</p>
-<div class="codewrapper sourceCode" id="cb1">
-<h3 class="code-label">R<i aria-hidden="true" data-feather="chevron-left"></i><i aria-hidden="true" data-feather="chevron-right"></i>
-</h3>
-<pre class="downlit sourceCode r">
-<code class="sourceCode R"><span><span class="fu">paste</span><span class="op">(</span><span class="st">"This"</span>, <span class="st">"new"</span>, <span class="st">"lesson"</span>, <span class="st">"looks"</span>, <span class="st">"good"</span><span class="op">)</span></span></code></pre>
-</div>
+<p>Study the following URL</p>
+<ul>
+<li><a href="https://duckduckgo.com/?q=discogs.com&amp;ia=web" class="external-link uri">https://duckduckgo.com/?q=discogs.com&amp;ia=web</a></li>
+</ul>
+<p>and post your answer to the following questions:</p>
+<ol style="list-style-type: decimal">
+<li>What is the scheme?</li>
+<li>How many domains are in the URL?</li>
+<li>Is there a port specified in this URL?</li>
+<li>What is the value associated with the second key in URL
+parameters?</li>
+</ol>
 </div>
 </div>
 </div>
@@ -940,7 +966,16 @@ docs)</div>
 </button>
 <div id="collapseSolution1" class="accordion-collapse collapse" data-bs-parent="#accordionSolution1" aria-labelledby="headingSolution1">
 <div class="accordion-body">
-<p>You should find a variety of files here.</p>
+<ol style="list-style-type: decimal">
+<li>https (Secure HTTP/TLS)</li>
+<li>One: <code>duckduckgo.com</code>. (<code>discogs.com</code> is in
+the URL parameters; arbitrary strings may appear here - potentially even
+including whole URLs)</li>
+<li>There is not. However, different schemes have default ports
+associated with them which will be used by applications when no port is
+specified explicitly.</li>
+<li><code>web</code></li>
+</ol>
 </div>
 </div>
 </div>
