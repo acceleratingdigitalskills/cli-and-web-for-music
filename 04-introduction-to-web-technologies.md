@@ -163,8 +163,8 @@ To do this:
 2. Then, open Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or <kbd>Ctrl+Shift+I</kbd>/<kbd>Cmd+Shift+I</kbd>)
 3. A new pane will pop open; navigate to the “Network” pane.
 4. Ensure that network activity is being recorded by clicking the red “record” button in the top left of the pane
-5. Refresh the page (shortcut: F5)
-6. Once the page is finsihed loading, disable recording
+5. Refresh the page (shortcut: <kbd>F5</kbd>)
+6. Once the page is finished loading, disable recording
 
 Something like the image shown here will result:
 
@@ -184,7 +184,7 @@ Under the Timing pane, you’ll see a more fine-grained look at the time that ea
 
 1. Pick a website that you regularly consult for research purposes; any website will do
 2. Visit any page on this website
-3. Open the developer tools in your browser and navigate to the Network tab (the name may vary). Press the refresh button (or F5)
+3. Open the developer tools in your browser and navigate to the Network tab (the name may vary). Press the refresh button (or <kbd>F5</kbd>)
 
 Post your answer to the following questions:
 
