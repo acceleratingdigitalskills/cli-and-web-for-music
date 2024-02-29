@@ -28,6 +28,19 @@ Learners should be familiar with paths and file extensions. This episode asks le
 
 ## What happens when we use a web browser?
 
+The majority of users access web resources by using browsers, such as Google Chrome, Mozilla Firefox, and Apple’s Safari, to view and interact with websites. Remote computers deliver the content of websites, via the internet, to the users’s computer following a request from the browser. In this course, we don’t have time to describe the details of how this content is delivered. However, It is important to know the following terminology:
+
+- server: a computer connected to the internet that provides content on request
+= client: a computer connected to the internet that requests and receives content
+
+Usually, the user deliberately makes these requests from the browser either by directly typing in the location of the content that is being requested into the browser’s navigation bar, or, more frequently, by clicking on hyperlinks, or links. The browser then uses a set of rules (shared by the client and the server) to initiate the request, and handle the response. 
+
+![An illustration of what happens when a user "visits" a web page using a browser](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b450e56f-d4c7-4b01-b26f-cca30fbeac15)
+
+A set of rules regulating the communication between two parties is called a protocol. The most commonly used set of rules has been specified over the last several decades of its existence and is called HTTP, which stands for HyperText Transfer Protocol. HTTP provides a set of formal guidelines about how Web content is published and made available on a server, and how a client should make and handle requests for this content. 
+
+The set of rules or patterns that specify the form the data that is passed between two parties is called a file format. You are likely familiar with a selection of file formats already. For example, the difference between a `.doc` file and a `.pdf` file of the same final-year essay is primarily a difference of format. One file format that is commonly requested by and delivered to web users is HyperText Markup Language, or HTML (`.html` file extension).
+
 ## What is a URL?
 
 A URL can be thought of as a path to a resource on a remote server, which is nothing more than the location of data on someone else's computer. A "resource" may be a web page, a media file, an entire site, a folder, or even a more complicated interactive experience. The following are examples of URLs:
