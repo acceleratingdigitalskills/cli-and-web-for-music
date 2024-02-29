@@ -22,7 +22,7 @@ exercises: 10
 
 :::::::::::::::::::::::::::::::::::::::: instructor
 
-Learners should be familiar with paths and file extensions. This episode asks learners to use a web broswer.
+Learners should be familiar with paths and file extensions. This episode asks learners to use a web browser.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
@@ -115,19 +115,52 @@ Once the assorted files have been requested by the client, which in this case is
 
 To understand precisely what and how many HTTP requests that a browser makes in the course of requesting a single web page, we can use the built-in Developer Tools function of most modern borwsers, to inspect the all network activity for a single page load event.
 
+Most modern browsers include a set of tools called "developer tools", which areused by the programmers who create websites and other interactive experiences to debug and assess the performance of their creations, among other things. However, they are an extraordinarily useful asset for researchers, and are a useful way to get started thinking about what's "under the hood" of the web. These are almost certainly available in the browser you've already installed.
+
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Developer Tools in different browsers
+## Developer tools in different browsers
 
-tbd 
+Different browsers (and different operating systems) expose developer tools in different ways. Here is a quick guide. Some of the details of what follows will vary depending on your specific browser. To follow along exactly, it is recommended to use Google Chrome.
+
+## Microsoft Edge
+1. Click on the **three-dot menu** in the top right corner.
+2. Hover over **More Tools**.
+3. Click on **Developer Tools**.
+
+Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
+
+## Firefox
+1. Click on the **three-line menu** in the top right corner.
+2. Click on **Web Developer**.
+3. Click on **Toggle Tools**.
+
+Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
+
+## Google Chrome
+1. Click on the **three-dot menu** in the top right corner.
+2. Hover over **More Tools**.
+3. Click on **Developer Tools**.
+
+Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
+
+## Safari (on Mac)
+1. Click on **Safari** in the top left corner of the screen.
+2. Click on **Preferences**.
+3. Go to the **Advanced** tab.
+4. Check the box at the bottom that says **Show Develop menu in menu bar**.
+5. Close the Preferences window. The **Develop** menu will now appear in the menu bar.
+6. Click on **Develop** in the menu bar.
+7. Click on **Show Web Inspector**.
+
+Or simply use the shortcut <kbd>Cmd+Option+I</kbd> on your keyboard.
 
 ::::::::::::::::::::::::::::::::::::::::::::::::::
-
 
 To do this:
 
 1. First, navigate to a site of your choice
-2. Then, open Chrome Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or <kbd>Ctrl+Shift+I</kbd>/<kbd>Cmd+Shift+I</kbd>)
+2. Then, open Developer Tools using the three dots menu in the top right (Windows/Linux) or under the menu View > Developer... (or <kbd>Ctrl+Shift+I</kbd>/<kbd>Cmd+Shift+I</kbd>)
 3. A new pane will pop open; navigate to the “Network” pane.
 4. Ensure that network activity is being recorded by clicking the red “record” button in the top left of the pane
 5. Refresh the page (shortcut: F5)
@@ -139,11 +172,13 @@ Something like the image shown here will result:
 
 The colored bars at the top of the screen show each individual HTTP request graphically (the “waterfall”), with the duration taken for each request to be fulfilled is given by the length of the bar. The different colors indicate what the status of the request is over time. Notice also the statisics at the end of the file list: the total number of requests made, the total amount of data transferred, and the total load time for the site.
 
-To dig into a particular request, select it from the list and double click on it. It will open a new pane as below. Look at the very first request in the list, the request for the document itself: index.html. From this we’ll see a a lot more information about the request, including the HTTP status code associated with the response, and the IP address of the responding server. We also see the “request method”, the HTTP “verb” that was used to fetch the resource. Almost all browser-initated requests will use the GET verb, but others are available (POST is another verb and is used to submit form data, and sometimes to call APIS—see below).
+To dig into a particular request, select it from the list and double click on it. It will open a new pane as below. Look at the very first request in the list, the request for the document itself: index.html. From this we’ll see a a lot more information about the request, including the HTTP status code associated with the response, and the IP address of the responding server. We also see the request method, the HTTP “verb” that was used to fetch the resource. Almost all browser-initated requests will use the `GET` verb, but others are available (`POST` is another verb and is used to submit form data, and sometimes to call APIs — see later episodes).
 
 Under the Timing pane, you’ll see a more fine-grained look at the time that each request took and what the colors stand for.
 
 ![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/4c87eaa7-03a0-4359-ab40-4e1abddf92fd)
+
+::::::::::::::::::::::::::::::::::::: challenge 
 
 ## Challenge 2: The feel of the web
 
@@ -172,9 +207,10 @@ Just like with paths, there are absolute URLs and relative URLs. This distinctio
 
 ::::::::::::::::::::::::::::::::::::: keypoints
 
-- HTTP
-- URIs
-- Developer tools can be used
+- Web servers provide remote resources to clients, most commonly browsers, using the HTTP protocol
+- URLs are the "addresses" of the web, and they specify the location of a remote resource for the purposes of retrieval
+- Most websites today consist of resources of a variety of file formats, and each remote resource usually demands its own HTTP request and has its own URL associated with it 
+- We can inspect the torrent of HTTP requests that websites require by using most modern browser's Developer Tools
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
 
