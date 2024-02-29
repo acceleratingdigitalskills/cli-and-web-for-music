@@ -1,6 +1,6 @@
 ---
 title: "Introduction to Web technologies"
-teaching: 15
+teaching: 20
 exercises: 10
 ---
 
@@ -68,7 +68,7 @@ There are also some additional elements to URLs that distinguish them from paths
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Dissecting a URL
+### Challenge 1: Dissecting a URL
 
 Study the following URL
 
@@ -99,15 +99,15 @@ Web browsers are little more than glorified document fetchers and viewers for th
 
 Next, we consider the overall look and feel or "style" of the website. Aspects of styling may include the size, color, and font choices for the text but also other considerations such as the relative or absolute layout of key page elements and their size. This information is conventionally transferred from the server to the browser as a separate file or set of files, in a format called Cascading Style Sheets (or, CSS), and is associated with the `.css` file extension. In order for the browser to present the web resource as intended, another HTTP request is required to retrieve the appropriate CSS file(s). Since HTTP makes use of URLs to locate and retrieve resources, there will be a URL associated with each of these files.
 
-![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/e0460463-5dee-45e5-a723-09f21b10f2e3)
+![](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/e0460463-5dee-45e5-a723-09f21b10f2e3)
 
 The web is a multimedia platform, and one of the earliest media types to be supported by browsers was the image. As you may know, images may be stored in a variety of formats (e.g. GIF, JPEG, WebP), and there is therefore a variety of extensions associated with them (i.e. `.gif`, `.jpg` or `.jpeg`, `.webp`). Again, for each image, a new HTTP request is typically required. Hence, each image will likely be associated with its own URL. You may notice that the URLs for resources, such as images, do not necessarily contain the same domain name as the domain name of the site you are visiting.
 
-![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/8a54d646-d044-434a-9fc0-3873686d178c)
+![](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/8a54d646-d044-434a-9fc0-3873686d178c)
 
 Increasingly, designers are keen to ensure that websites and related resources are interactive and dynamic, and this requires the transfer of content in yet another format: Javascript. Javascript is a flexible, general-purpose programming language that is executed (more-or-less) entirely contained within the browser and allows web developers to create extremely rich, interactive modifications to the document content on the fly. It is commonly stored in files with the `.js` extension, which are requested by the browser, again using HTTP.
 
-![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b7794a69-c650-4196-82ed-6072bf3616af)
+![](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/b7794a69-c650-4196-82ed-6072bf3616af)
 
 Once the assorted files have been requested by the client, which in this case is the web browser, they are assembled and interpreted to provide the total experience of the page. The specific details of each of thes file formats are not relevant to this lesson; the key takeaway is that most web pages in fact decompose into multiple parts, each of which is associated with a single HTTP request. Understanding this fact allows us to begin to pick apart web resources into their consituent parts, some of which are more or less usable for research purposes.
 
@@ -119,32 +119,32 @@ Most modern browsers include a set of tools called "developer tools", which areu
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Developer tools in different browsers
+### Developer tools in different browsers
 
 Different browsers (and different operating systems) expose developer tools in different ways. Here is a quick guide. Some of the details of what follows will vary depending on your specific browser. To follow along exactly, it is recommended to use Google Chrome.
 
-## Microsoft Edge
+#### Microsoft Edge
 1. Click on the **three-dot menu** in the top right corner.
 2. Hover over **More Tools**.
 3. Click on **Developer Tools**.
 
 Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
 
-## Firefox
+#### Firefox
 1. Click on the **three-line menu** in the top right corner.
 2. Click on **Web Developer**.
 3. Click on **Toggle Tools**.
 
 Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
 
-## Google Chrome
+#### Google Chrome
 1. Click on the **three-dot menu** in the top right corner.
 2. Hover over **More Tools**.
 3. Click on **Developer Tools**.
 
 Or simply use the shortcut <kbd>F12</kbd> or <kbd>Ctrl+Shift+I</kbd> on your keyboard.
 
-## Safari (on Mac)
+#### Safari (on Mac)
 1. Click on **Safari** in the top left corner of the screen.
 2. Click on **Preferences**.
 3. Go to the **Advanced** tab.
@@ -168,7 +168,7 @@ To do this:
 
 Something like the image shown here will result:
 
-![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dbc8f0be-55a1-4963-bad0-c9c0d4cd3a59)
+![](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dbc8f0be-55a1-4963-bad0-c9c0d4cd3a59)
 
 The colored bars at the top of the screen show each individual HTTP request graphically (the “waterfall”), with the duration taken for each request to be fulfilled is given by the length of the bar. The different colors indicate what the status of the request is over time. Notice also the statisics at the end of the file list: the total number of requests made, the total amount of data transferred, and the total load time for the site.
 
@@ -176,11 +176,11 @@ To dig into a particular request, select it from the list and double click on it
 
 Under the Timing pane, you’ll see a more fine-grained look at the time that each request took and what the colors stand for.
 
-![image](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/4c87eaa7-03a0-4359-ab40-4e1abddf92fd)
+![](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/4c87eaa7-03a0-4359-ab40-4e1abddf92fd)
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 2: The feel of the web
+### Challenge 2: The feel of the web
 
 1. Pick a website that you regularly consult for research purposes; any website will do
 2. Visit any page on this website
@@ -199,7 +199,7 @@ Post your answer to the following questions:
 
 :::::::::::::::::::::::::::::::::::::::::  callout
 
-## Absolute vs. relative URLs
+### Absolute vs. relative URLs
 
 Just like with paths, there are absolute URLs and relative URLs. This distinction is not relevant for the rest of this lesson, but if you would like to learn more about this, please consult the [mdn web docs page, "What is a URL?"](https://developer.mozilla.org/en-US/docs/Learn/Common_questions/Web_mechanics/What_is_a_URL).
 
