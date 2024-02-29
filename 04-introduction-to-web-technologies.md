@@ -39,25 +39,39 @@ A URL can be thought of as a path to a resource on a remote server, which is not
 
 URLs have some obvious similarities with paths. For example, the forward slash character (`/`) is used as a separator. This helps keep web resources organised, but can also help researchers, as we will see in later episodes. Howeer, there is no guarantee that the structure of the URL corresponds directly to the layout of particular directories on the remote server.
 
-There are also some additional elements to URLs that distinguish them from paths. Let's have a look at the anatomy of a URL
+There are also some additional elements to URLs that distinguish them from paths. Let's have a look at the anatomy of a URL:
 
 ![The anatomy of a URL (credit: mdn Web docs)](https://github.com/acceleratingdigitalskills/cli-and-web-for-music/assets/94374319/dd152a76-cae4-4839-821d-0690aecfd33b){alt='A sample URL with its components highlighted: scheme, domain name, port, path, parameters, and anchor'}
 
+- *scheme*: tells what protocol should be used to interact with the remote resource
+- *domain name*: points us to the location of the remote server in human-readable form
+- *port*: an integer that is used to further specify where to look on the remote server 
+- *path*: where the remote resource is located within the organisational structure of the server
+- *parameters*: a list of key-value pairs, separated by the `&` symbol which modify the resource returned in some way
+- *anchor*: this optional part of a URL can be used to link directly to some component  
 
 ::::::::::::::::::::::::::::::::::::: challenge 
 
-## Challenge 1: Can you do it?
+## Challenge 1: Dissecting a URL
 
-What is the output of this command?
+Study the following URL
 
-```r
-paste("This", "new", "lesson", "looks", "good")
-```
+- https://duckduckgo.com/?q=discogs.com&ia=web
+
+and post your answer to the following questions:
+
+1. What is the scheme?
+2. How many domains are in the URL?
+3. Is there a port specified in this URL?
+4. What is the value associated with the second key in URL parameters?
 
 :::::::::::::::::::::::: solution 
 
-You should find a variety of files here.
- 
+1. https (Secure HTTP/TLS)
+2. One: `duckduckgo.com`. (`discogs.com` is in the URL parameters; arbitrary strings may appear here - potentially even including whole URLs)
+3. There is not. However, different schemes have default ports associated with them which will be used by applications when no port is specified explicitly.
+4. `web`
+
 :::::::::::::::::::::::::::::::::
 
 ::::::::::::::::::::::::::::::::::::::::::::::::
